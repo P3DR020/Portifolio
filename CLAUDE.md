@@ -143,14 +143,20 @@ Decisões de conteúdo que valem registrar:
   (TypeScript, JavaScript, HTML/CSS, Java). Django, PostgreSQL, AWS, Nginx e
   Docker, que vinham do template, foram removidos.
 
+**Foto de perfil.** `assets/img/perfil.jpg` é um recorte quadrado (560×560, 55 KB)
+feito a partir de `assets/img/perfil-original.jpg`, que é a foto de corpo inteiro
+que o Pedro mandou. O avatar do hero é um círculo com `object-fit:cover`: a
+original em 3:4 entrava cortando a cabeça, por isso o recorte fechado no rosto.
+Para reenquadrar, recortar de novo a partir da original — ela foi mantida só
+para isso e não é carregada pelo site. O `perfil.svg` continua na pasta como
+referência do placeholder antigo; pode ser apagado.
+
 **As partículas foram escritas do zero.** A regra abaixo pede para não reescrever
 `particles.js` por estar calibrado, mas o arquivo nunca existiu no repositório.
 Se houver uma versão original em algum lugar, ela vale mais que a atual.
 
 ### Em aberto
 
-- **Foto de perfil.** `assets/img/perfil.svg` ainda é o placeholder cinza.
-  Trocar por `assets/img/perfil.jpg` e ajustar o `src` no `index.html`.
 - **Instagram.** Botão removido do contato por falta de perfil; devolver se
   o Pedro passar o link.
 - **Terceiro projeto.** A seção tem dois cards. Candidatos nos repos:
