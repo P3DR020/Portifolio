@@ -1,0 +1,16 @@
+/* ============================================================
+   MAIN — só @imports. Nenhuma regra mora aqui.
+   A ordem importa: tokens antes de tudo, seções por último.
+   ============================================================ */
+
+@import url('tokens.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+
+@import url('sections/hero.css');
+@import url('sections/about.css');
+@import url('sections/stack.css');
+@import url('sections/career.css');
+@import url('sections/projects.css');
+@import url('sections/contact.css');

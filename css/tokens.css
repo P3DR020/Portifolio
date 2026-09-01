@@ -1,0 +1,40 @@
+/* ============================================================
+   TOKENS — a fonte da verdade do design.
+   Nenhum hex solto deve existir fora deste arquivo.
+   ============================================================ */
+
+:root{
+  /* ---- PALETA ----
+     bg        #08090b  preto azulado, fundo da página
+     bg-soft   #0f1114  um degrau acima do fundo: chips, tags, cards
+     line      #1e2126  bordas e divisórias
+     txt       #e8e6e3  texto principal, branco levemente quente
+     txt-dim   #8b9099  texto secundário, legendas, labels
+     accent    #ffb454  âmbar de terminal — a única cor viva do site
+     ok        #4ade80  verde do status "online" / disponível
+  */
+  --bg:#08090b;
+  --bg-soft:#0f1114;
+  --line:#1e2126;
+  --txt:#e8e6e3;
+  --txt-dim:#8b9099;
+  --accent:#ffb454;
+  --accent-soft:rgba(255,180,84,.12);   /* âmbar a 12% — preenchimento de hover */
+  --ok:#4ade80;
+
+  /* partículas do hero (canvas não lê variável CSS, ver js/modules/particles.js) */
+  --particle:rgba(255,255,255,.28);
+
+  /* ---- TIPOGRAFIA ---- */
+  --mono:'JetBrains Mono',ui-monospace,monospace;      /* corpo, labels, tudo miúdo */
+  --display:'Bricolage Grotesque',system-ui,sans-serif; /* títulos e nome */
+
+  /* ---- LAYOUT ---- */
+  --max:1160px;        /* largura máxima do conteúdo */
+  --gutter:24px;       /* respiro lateral */
+  --section-y:120px;   /* espaço vertical entre seções (desktop) */
+  --section-y-sm:88px; /* idem no mobile */
+
+  /* ---- MOVIMENTO ---- */
+  --ease:cubic-bezier(.22,.61,.36,1);
+}

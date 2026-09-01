@@ -1,0 +1,75 @@
+/* ============================================================
+   CARREIRA — timeline de empregos + botão "mostrar mais".
+   .hidden-job some até o clique (js/modules/experience.js).
+   ============================================================ */
+
+.job{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:28px;
+  padding:28px 0;
+  border-top:1px solid var(--line);
+}
+
+.job:last-of-type{border-bottom:1px solid var(--line)}
+
+.when{
+  font-size:12px;
+  color:var(--txt-dim);
+  padding-top:4px;
+}
+
+.job h3{
+  font-size:19px;
+  margin-bottom:4px;
+}
+
+.co{
+  font-size:13px;
+  color:var(--accent);
+  margin-bottom:14px;
+}
+
+.job ul{
+  display:grid;
+  gap:8px;
+  font-size:13.5px;
+  color:var(--txt-dim);
+}
+
+.job li{
+  position:relative;
+  padding-left:18px;
+}
+
+.job li::before{
+  content:'▸';
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+/* escondido até o botão ser clicado */
+.hidden-job{display:none}
+.hidden-job.show{display:grid}
+
+.more{
+  margin-top:26px;
+  font-size:13px;
+  color:var(--txt-dim);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:10px 20px;
+  transition:border-color .25s var(--ease),color .25s var(--ease);
+}
+
+.more:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.more span{opacity:.6}
+
+@media (max-width:760px){
+  .job{grid-template-columns:1fr;gap:10px}
+}

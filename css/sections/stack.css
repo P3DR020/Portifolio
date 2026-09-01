@@ -1,0 +1,35 @@
+/* ============================================================
+   STACK — duas faixas que correm infinitamente.
+   O conteúdo é duplicado em js/modules/marquee.js; a animação
+   anda -50% justamente porque a faixa tem o dobro do conteúdo.
+   ============================================================ */
+
+.marquee{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:14px;
+  /* esmaece as pontas em vez de cortar seco */
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+
+.track{
+  display:flex;
+  gap:12px;
+  width:max-content;
+  animation:slide 34s linear infinite;
+}
+
+/* a segunda faixa corre ao contrário, pra não ficar hipnótico */
+.marquee:nth-of-type(even) .track{
+  animation-direction:reverse;
+}
+
+.marquee:hover .track{animation-play-state:paused}
+
+@keyframes slide{to{transform:translateX(-50%)}}
+
+@media (prefers-reduced-motion:reduce){
+  .track{animation:none;flex-wrap:wrap;width:auto}
+  .marquee{-webkit-mask-image:none;mask-image:none}
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Foto de perfil">
+  <rect width="400" height="400" fill="#0f1114"/>
+  <circle cx="200" cy="158" r="62" fill="#1e2126"/>
+  <path d="M78 400c0-67 55-121 122-121s122 54 122 121z" fill="#1e2126"/>
+  <text x="200" y="372" text-anchor="middle" font-family="monospace" font-size="19" fill="#8b9099">sua foto aqui</text>
+</svg>

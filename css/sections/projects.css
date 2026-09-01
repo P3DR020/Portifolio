@@ -1,0 +1,84 @@
+/* ============================================================
+   PROJETOS — lista de cards em linha, um por projeto.
+   ============================================================ */
+
+.projects{
+  display:grid;
+  gap:0;
+}
+
+.project{
+  display:grid;
+  grid-template-columns:60px 1fr auto;
+  align-items:center;
+  gap:24px;
+  padding:30px 20px;
+  border-top:1px solid var(--line);
+  border-radius:12px;
+  transition:background .3s var(--ease),padding-left .3s var(--ease);
+}
+
+.project:last-child{border-bottom:1px solid var(--line)}
+
+.project:hover{
+  background:var(--bg-soft);
+  padding-left:30px;
+}
+
+.num{
+  font-family:var(--display);
+  font-size:26px;
+  font-weight:800;
+  color:var(--line);
+  transition:color .3s var(--ease);
+}
+
+.project:hover .num{color:var(--accent)}
+
+/* linha de tecnologias acima do título */
+.project .stack{
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--txt-dim);
+  margin-bottom:7px;
+}
+
+.project h3{
+  font-size:22px;
+  margin-bottom:7px;
+}
+
+.project p{
+  margin:0;
+  font-size:13.5px;
+  color:var(--txt-dim);
+  max-width:62ch;
+}
+
+.go{
+  font-size:12px;
+  color:var(--accent);
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(-6px);
+  transition:opacity .3s var(--ease),transform .3s var(--ease);
+}
+
+.project:hover .go{
+  opacity:1;
+  transform:none;
+}
+
+@media (max-width:760px){
+  .project{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:24px 0;
+  }
+
+  .project:hover{padding-left:0}
+
+  /* no toque não existe hover: o link fica sempre visível */
+  .go{opacity:1;transform:none}
+}

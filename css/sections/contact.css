@@ -1,0 +1,39 @@
+/* ============================================================
+   CONTATO — última seção, centralizada.
+   ============================================================ */
+
+#contato{text-align:center}
+
+#contato .eyebrow{
+  /* o eyebrow é inline-block pra centralizar junto com o resto */
+  display:inline-block;
+}
+
+#contato > p{
+  color:var(--txt-dim);
+  max-width:48ch;
+  margin:0 auto 36px;
+}
+
+.mailto{
+  display:inline-block;
+  font-family:var(--display);
+  font-size:clamp(20px,4vw,36px);
+  font-weight:600;
+  color:var(--accent);
+  border-bottom:1px solid transparent;
+  padding-bottom:4px;
+  margin-bottom:40px;
+  transition:border-color .3s var(--ease);
+  /* e-mails longos não podem estourar a tela no celular */
+  word-break:break-all;
+}
+
+.mailto:hover{border-bottom-color:var(--accent)}
+
+.socials{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}

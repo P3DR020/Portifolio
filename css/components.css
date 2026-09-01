@@ -1,0 +1,46 @@
+/* ============================================================
+   COMPONENTS — só o que aparece em mais de uma seção:
+   .btn (hero, contato) e .chip (stack).
+   ============================================================ */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:13px;
+  color:var(--txt);
+  transition:border-color .25s var(--ease),background .25s var(--ease),color .25s var(--ease);
+}
+
+.btn:hover{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+
+/* variante cheia — uma por tela, no máximo */
+.btn.solid{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:var(--bg);
+  font-weight:500;
+}
+
+.btn.solid:hover{
+  background:transparent;
+  color:var(--accent);
+}
+
+.chip{
+  display:inline-block;
+  padding:8px 16px;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:8px;
+  font-size:13px;
+  color:var(--txt-dim);
+  white-space:nowrap;
+}

@@ -1,0 +1,169 @@
+/* ============================================================
+   LAYOUT — barra de progresso, header, nav, drawer,
+   o <section> genérico e o footer.
+   ============================================================ */
+
+/* ---- barra de progresso do scroll ---- */
+
+#progress{
+  position:fixed;
+  top:0;left:0;
+  height:2px;
+  width:0;
+  background:var(--accent);
+  z-index:100;
+  transition:width .1s linear;
+}
+
+/* ---- header ---- */
+
+#topbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:90;
+  border-bottom:1px solid transparent;
+  transition:background .3s var(--ease),border-color .3s var(--ease);
+}
+
+/* .solid entra via js/modules/nav.js depois de rolar */
+#topbar.solid{
+  background:rgba(8,9,11,.82);
+  backdrop-filter:blur(12px);
+  border-bottom-color:var(--line);
+}
+
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:18px var(--gutter);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.logo{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:-.01em;
+}
+
+.logo b{color:var(--accent);font-weight:800}
+
+.nav ul{
+  display:flex;
+  gap:28px;
+  font-size:13px;
+}
+
+.nav ul a{
+  color:var(--txt-dim);
+  transition:color .2s var(--ease);
+}
+
+.nav ul a:hover{color:var(--txt)}
+
+/* seção visível no momento — marcada pelo scrollspy */
+.nav ul a.active{color:var(--accent)}
+
+/* ---- botão hambúrguer ---- */
+
+.burger{
+  display:none;
+  width:26px;
+  height:18px;
+  position:relative;
+}
+
+.burger span{
+  position:absolute;
+  left:0;
+  height:1.5px;
+  width:100%;
+  background:var(--txt);
+  transition:transform .3s var(--ease),opacity .2s var(--ease);
+}
+
+.burger span:nth-child(1){top:0}
+.burger span:nth-child(2){top:8px}
+.burger span:nth-child(3){top:16px}
+
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---- menu mobile ---- */
+
+.drawer{
+  position:fixed;
+  inset:0;
+  z-index:80;
+  background:var(--bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s var(--ease);
+}
+
+.drawer.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.drawer a{
+  font-family:var(--display);
+  font-size:28px;
+  padding:10px 0;
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+
+.drawer a i{
+  font-style:normal;
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--accent);
+}
+
+/* ---- seções ---- */
+
+section{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:var(--section-y) var(--gutter);
+}
+
+/* o hero manda no próprio tamanho, ver sections/hero.css */
+section#hero{
+  max-width:none;
+  padding:0;
+}
+
+/* ---- footer ---- */
+
+footer{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:32px var(--gutter);
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  font-size:12px;
+  color:var(--txt-dim);
+}
+
+/* ---- mobile ---- */
+
+@media (max-width:760px){
+  section{padding:var(--section-y-sm) var(--gutter)}
+  .nav ul{display:none}
+  .burger{display:block}
+}

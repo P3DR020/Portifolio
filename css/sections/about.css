@@ -1,0 +1,76 @@
+/* ============================================================
+   SOBRE — texto à esquerda, contador de anos e fatos à direita.
+   ============================================================ */
+
+.about{
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+  gap:56px;
+  align-items:start;
+}
+
+.about p{
+  margin:0 0 18px;
+  color:var(--txt-dim);
+}
+
+.about p strong{
+  color:var(--txt);
+  font-weight:500;
+}
+
+/* ---- contador de anos (js/modules/counter.js) ---- */
+
+.years{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:26px;
+  margin-bottom:16px;
+  background:var(--bg-soft);
+}
+
+.years .big{
+  font-family:var(--display);
+  font-size:60px;
+  font-weight:800;
+  line-height:1;
+  color:var(--accent);
+}
+
+.years span{
+  display:block;
+  font-size:12px;
+  color:var(--txt-dim);
+  margin-top:8px;
+  max-width:22ch;
+}
+
+/* ---- lista de fatos ---- */
+
+.facts{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.fact{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:13px 18px;
+  font-size:12.5px;
+  border-bottom:1px solid var(--line);
+}
+
+.fact:last-child{border-bottom:0}
+
+.fact span:first-child{
+  color:var(--txt-dim);
+  flex-shrink:0;
+}
+
+.fact span:last-child{text-align:right}
+
+@media (max-width:860px){
+  .about{grid-template-columns:1fr;gap:36px}
+}
