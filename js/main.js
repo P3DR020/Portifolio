@@ -14,10 +14,10 @@ import { initExperience } from './modules/experience.js';
 
 /* Cargos que giram embaixo do nome. Edite à vontade. */
 const ROLES = [
-  'Desenvolvedor Web',
-  'Front-end com React & TypeScript',
-  'Designer que aprendeu a programar',
-  'Ciência da Computação — UNIFACS'
+  'Desenvolvedor Front-end',
+  'React · TypeScript · Next.js',
+  'Do Figma ao deploy, sozinho',
+  'Salvador, BA — trabalho remoto'
 ];
 
 initHeroText(ROLES);
