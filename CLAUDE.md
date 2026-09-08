@@ -160,6 +160,13 @@ projetos, contato, `ROLES` e os chips de stack. A ficha técnica do "sobre"
 trocou a linha única "Stack" por duas — "Front" e "Dados". O card do FinDash
 passou a citar Supabase e PostgreSQL. A meta description acompanhou.
 
+**Teste em 375px (08/09/2026).** Conferido no navegador pelo Pedro, depois do
+reposicionamento. Vale saber, para não reabrir como se fosse defeito: na ficha
+técnica do "sobre", "Cursando" e "Diferencial" ocupam duas linhas nessa largura.
+É o comportamento esperado — o valor é alinhado à direita e quebra, sem estourar
+a caixa. As faixas de stack não dependem da largura da tela (`overflow:hidden`
+com `width:max-content`), então mexer na quantidade de chips não afeta o mobile.
+
 **Foto de perfil.** `assets/img/perfil.jpg` é um recorte quadrado (560×560, 55 KB)
 feito a partir de `assets/img/perfil-original.jpg`, que é a foto de corpo inteiro
 que o Pedro mandou. O avatar do hero é um círculo com `object-fit:cover`: a
@@ -178,7 +185,6 @@ Se houver uma versão original em algum lugar, ela vale mais que a atual.
   o Pedro passar o link.
 - **Terceiro projeto.** A seção tem dois cards. Candidatos nos repos:
   `MeuTreino`, `PlannerFinanceiro`, `DoceLua`, `PetShop`.
-- **Teste em 375px.** A regra do projeto pede; ainda não foi feito em navegador real.
 - **Perguntas que o rótulo "fullstack" atrai.** `textos-portfolio_1.md` termina
   com uma lista delas (por que Supabase e não API própria, como estão as
   tabelas do FinDash, Row Level Security, como o fechamento mensal funciona,
