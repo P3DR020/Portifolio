@@ -1,8 +1,13 @@
 # Portfólio pessoal
 
-Portfólio do Pedro Henrique Santos de Jesus — desenvolvedor web, Salvador/BA.
+Portfólio do Pedro Henrique Santos de Jesus — desenvolvedor fullstack, Salvador/BA.
 Formado em ADS pelo SENAI, cursando Ciência da Computação na UNIFACS (3º semestre).
-Vem do design gráfico, hoje trabalha com React e TypeScript.
+Vem do design gráfico, hoje trabalha com React, TypeScript, Next.js e PostgreSQL
+(via Supabase).
+
+O site se posiciona como **fullstack**, não front-end. O que sustenta isso é o
+FinDash (Next.js + Supabase/PostgreSQL, modelagem própria das tabelas). Ao
+escrever texto novo, não voltar para "front-end".
 
 Links usados no site (trocar aqui e no `index.html` juntos):
 
@@ -116,7 +121,7 @@ Descrição de projeto: uma ou duas frases sobre o problema que ele resolve e o 
 
 ## Estado do trabalho
 
-Última atualização: 01/09/2026.
+Última atualização: 08/09/2026.
 
 ### Feito
 
@@ -139,9 +144,21 @@ Decisões de conteúdo que valem registrar:
   "projetos em produção" (`data-count="2"`), que é verificável.
 - Textos que prometiam o que não dá para sustentar saíram: "APIs que aguentam
   o tranco", "sistemas usados por centenas de pessoas", "respondo em até 24h".
-- Os chips de stack foram alinhados ao que existe no GitHub do Pedro
-  (TypeScript, JavaScript, HTML/CSS, Java). Django, PostgreSQL, AWS, Nginx e
-  Docker, que vinham do template, foram removidos.
+- Os chips de stack só listam o que existe em projeto entregue. Django, AWS,
+  Nginx e Docker, que vinham do template, foram removidos — **não repor esses
+  quatro**. Node.js, Tailwind, MySQL e REST APIs também saíram, por não terem
+  projeto que os sustente; voltam se houver um. PostgreSQL fica: o FinDash usa
+  Supabase, que é PostgreSQL de verdade.
+
+  Faixa 1 (front): TypeScript · JavaScript · React · Next.js · Vite · HTML5 · CSS3
+  Faixa 2 (dados e ferramentas): PostgreSQL · Supabase · SQL · Java · Git ·
+  Vercel · Figma · Photoshop
+
+**Reposicionamento para fullstack (08/09/2026).** Os textos de
+`textos-portfolio_1.md` (versão 3) foram aplicados: hero, "sobre", carreira,
+projetos, contato, `ROLES` e os chips de stack. A ficha técnica do "sobre"
+trocou a linha única "Stack" por duas — "Front" e "Dados". O card do FinDash
+passou a citar Supabase e PostgreSQL. A meta description acompanhou.
 
 **Foto de perfil.** `assets/img/perfil.jpg` é um recorte quadrado (560×560, 55 KB)
 feito a partir de `assets/img/perfil-original.jpg`, que é a foto de corpo inteiro
@@ -162,6 +179,11 @@ Se houver uma versão original em algum lugar, ela vale mais que a atual.
 - **Terceiro projeto.** A seção tem dois cards. Candidatos nos repos:
   `MeuTreino`, `PlannerFinanceiro`, `DoceLua`, `PetShop`.
 - **Teste em 375px.** A regra do projeto pede; ainda não foi feito em navegador real.
-- **Git.** A pasta não é um repositório git — não há histórico e nada é
-  reversível por commit.
+- **Perguntas que o rótulo "fullstack" atrai.** `textos-portfolio_1.md` termina
+  com uma lista delas (por que Supabase e não API própria, como estão as
+  tabelas do FinDash, Row Level Security, como o fechamento mensal funciona,
+  quantos usuários reais). São para o Pedro se preparar, não tarefa de código —
+  mas se alguma resposta não se sustentar, o texto correspondente muda.
+- **Git.** A pasta já é um repositório git, com histórico — mudanças são
+  reversíveis por commit.
 
